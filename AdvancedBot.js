@@ -28,7 +28,7 @@ client.on('message', message => {
     const command = args.shift().toLowercase();
   
   if(command === 'links') { //ONLY DO THIS IF YOU WANT A SMALL AMOUNT OF COMMADS VERY VERY BAD WAY!!
-    message.channel.send('links here');
+    client.commands.get('links').execute(message, args);
 }
 
 client.login('x'); //this is were you put your discords bot token! If you do not know how to do this I will put a tutorial in the readme.md!
