@@ -4,6 +4,10 @@ const client = new Discord.Client();
 
 const prefix = "."//this is were you put your prefix so for ex. this would be - so i could do -command and it out put what command is
 
+const fs = require("fs");
+
+client.commands = new Discord.Collection();
+
 const commandFiles = fs.readdirSync(./commands/).filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
