@@ -6,6 +6,9 @@ const prefix = "."//this is were you put your prefix so for ex. this would be - 
 
 const commandFiles = fs.readdirSync(./commands/).filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
+  const command = require(`./commands/${file}`);
+  
+  client.commands.set(command.name, command)
 
 }
 
