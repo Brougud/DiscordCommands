@@ -29,6 +29,12 @@ client.on('message', message => {
   
   if(command === 'links') { //ONLY DO THIS IF YOU WANT A SMALL AMOUNT OF COMMADS VERY VERY BAD WAY!!
     client.commands.get('links').execute(message, args);
+} else if(command === 'ban'){
+    client.commands.get('ban').execute(message, args);
+} else if(command === 'kick'){
+  client.commands.get('kick').execute(message, args);
+} else if(command === 'reactionrole'){
+  client.commands.get('reactionrole').execute(message, args, Discord, client);
 }
 
 client.login('x'); //this is were you put your discords bot token! If you do not know how to do this I will put a tutorial in the readme.md!
