@@ -33,8 +33,8 @@ client.on('message', message => {
     client.commands.get('ban').execute(message, args);
 } else if(command === 'kick'){
   client.commands.get('kick').execute(message, args);
-} else if(command === 'reactionrole'){
-  client.commands.get('reactionrole').execute(message, args, Discord, client);
+} else if(command === 'say'){
+  client.commands.get('say').execute(message, args);
 }
 
 client.login('x'); //this is were you put your discords bot token! If you do not know how to do this I will put a tutorial in the readme.md!
