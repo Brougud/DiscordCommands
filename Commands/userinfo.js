@@ -16,7 +16,7 @@ modules.export = {
   description: 'get the info of a player',
   usage: "[ username | ID | mention ]"
   
-  run: (client, message, args) => {
+  execute(client, message, args) => {
         const member = getMember(message, args.join(" "));
 
         // Member variables
@@ -37,10 +37,12 @@ modules.export = {
             **> Joined at:** ${joined}
             **> Roles:** ${roles}`, true)
 
-            .addField('User information:', stripIndents`**> ID:** ${member.user.id}
+            .addField('User information:', stripIndents`
+            **> ID:** ${member.user.id}
             **> Username**: ${member.user.username}
             **> Tag**: ${member.user.tag}
-            **> Created at**: ${created}`, true)
+            **> Created at**: ${created}
+            **> Status**: ${member.user.presence.status}`, true)
             
             .setTimestamp()
 
