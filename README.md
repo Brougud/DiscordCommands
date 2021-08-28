@@ -5,7 +5,7 @@ A place to get discord bot commands code
 ## Upcoming! (to-do)
 
  - [x] 8Ball
- - [ ] Say
+ - [x] Say
  - [ ] Temp Mute
  - [ ] Chat filter!
  - [x] Ban
